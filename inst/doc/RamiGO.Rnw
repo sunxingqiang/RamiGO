@@ -60,11 +60,12 @@
 
 \SweaveOpts{highlight=TRUE, tidy=TRUE, keep.space=TRUE, keep.blank.space=FALSE, keep.comment=TRUE}
 
-%<<setup,echo=FALSE,results=hide>>=
+<<setup,echo=FALSE,results=hide>>=
 %library(pgfSweave)
 %setCacheDir("cache")
-%options(keep.source=TRUE)
-%@
+options(keep.source=TRUE)
+options(width=60)
+@
 
 \maketitle
 \tableofcontents
