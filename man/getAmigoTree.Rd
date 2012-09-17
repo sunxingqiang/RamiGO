@@ -7,8 +7,9 @@ Getting the DAG GO tree for a set of GO ID's.
 Getting the DAG GO tree for a set of GO ID's from AmiGO. Saves it as a png, svg or dot file. Returns the webserver response as a string.
 }
 \usage{
-getAmigoTree(goIDs, color, filename, picType = "png",
-  modeType = "advanced", webserver, saveResult=TRUE)
+getAmigoTree(goIDs, color, pvalues, pcolors = c("white","tomato"), 
+ psplit = c(1,0.25,0.1,0.05,0.001), filename, picType = "png", 
+ modeType = "advanced", webserver, saveResult = TRUE)
 }
 \arguments{
   \item{goIDs}{
@@ -16,6 +17,15 @@ getAmigoTree(goIDs, color, filename, picType = "png",
 }
   \item{color}{
 	is a vector of colors(). Either of length 1 or length(goIDs).
+}
+  \item{pvalues}{
+	is a vector of pvalues.
+}
+  \item{pcolors}{
+	colors for gradient.
+}
+  \item{pslit}{
+	is a vector of pvalues that sets different color gradients ranges.
 }
   \item{filename}{
 	is the output filename. If the file ending is missing or not matching the picType, the file ending is automatically fixed (replaced or created).
@@ -59,4 +69,9 @@ dd <- getAmigoTree(goIDs=goIDs,color=color,
 
 ppNoColor <- getAmigoTree(goIDs=goIDs,
   filename="example-no-color",saveResult=FALSE)
+
+goIDs <- c("GO:0051130","GO:0050789","GO:0019912","GO:0016301","GO:0003824","GO:0005783","GO:0043229")
+pvalues <- c(0.001,0.5,0.0001,0.16,0.47,0.00006,0.002)
+
+ptest <- getAmigoTree(goIDs=goIDs, pvalues=pvalues, filename="pvaluetest")
 }
