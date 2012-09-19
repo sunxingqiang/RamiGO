@@ -24,7 +24,7 @@ getAmigoTree(goIDs, color, pvalues, pcolors = c("white","tomato"),
   \item{pcolors}{
 	colors for gradient.
 }
-  \item{pslit}{
+  \item{psplit}{
 	is a vector of pvalues that sets different color gradients ranges.
 }
   \item{filename}{

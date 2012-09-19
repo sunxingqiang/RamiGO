@@ -1,9 +1,9 @@
 Package: RamiGO
 Type: Package
 Title: AmiGO visualize R interface
-Version: 1.3.2
-Date: 2012-09-18
-Author: Markus Schroeder, Daniel Gusenleitner, Aedin Culhane, Benjamin Haibe-Kains, John Quackenbush
+Version: 1.3.3
+Date: 2012-09-19
+Author: Markus Schroeder, Daniel Gusenleitner, John Quackenbush, Aedin Culhane, Benjamin Haibe-Kains
 Maintainer: Markus Schroeder <mschroed@jimmy.harvard.edu>
 Description: R interface sending requests to AmiGO visualize, retrieving DAG GO trees, parsing GraphViz DOT format files and exporting GML files for Cytoscape. Also uses RCytoscape to interactively display AmiGO trees in Cytoscape.
 License: Artistic-2.0
