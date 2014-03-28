@@ -98,15 +98,15 @@ leaves(object) <- value
 goIDs <- c("GO:0051130","GO:0019912","GO:0005783")
 color <- c("lightblue","red","yellow")
 
-dd <- getAmigoTree(goIDs=goIDs,color=color,
-  filename="example",picType="dot",saveResult=FALSE)
-tt <- readAmigoDot(object=dd)
+#dd <- getAmigoTree(goIDs=goIDs,color=color,
+#  filename="example",picType="dot",saveResult=FALSE)
+#tt <- readAmigoDot(object=dd)
 
-agraph(tt)
-adjMatrix(tt)
-annot(tt)
-relations(tt)
-leaves(tt)
+#agraph(tt)
+#adjMatrix(tt)
+#annot(tt)
+#relations(tt)
+#leaves(tt)
 }
 
 \keyword{classes}

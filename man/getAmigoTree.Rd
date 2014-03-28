@@ -60,18 +60,18 @@ goIDs <- c("GO:0051130","GO:0019912","GO:0005783")
 color <- c("lightblue","red","yellow")
 
 ## get results
-pp <- getAmigoTree(goIDs=goIDs,color=color,
-  filename="example")
-ss <- getAmigoTree(goIDs=goIDs,color=color,
-  filename="example",picType="svg",saveResult=FALSE)
-dd <- getAmigoTree(goIDs=goIDs,color=color,
-  filename="example",picType="dot",saveResult=FALSE)
+#pp <- getAmigoTree(goIDs=goIDs,color=color,
+#  filename="example")
+#ss <- getAmigoTree(goIDs=goIDs,color=color,
+#  filename="example",picType="svg",saveResult=FALSE)
+#dd <- getAmigoTree(goIDs=goIDs,color=color,
+#  filename="example",picType="dot",saveResult=FALSE)
 
-ppNoColor <- getAmigoTree(goIDs=goIDs,
-  filename="example-no-color",saveResult=FALSE)
+#ppNoColor <- getAmigoTree(goIDs=goIDs,
+#  filename="example-no-color",saveResult=FALSE)
 
-goIDs <- c("GO:0051130","GO:0050789","GO:0019912","GO:0016301","GO:0003824","GO:0005783","GO:0043229")
-pvalues <- c(0.001,0.5,0.0001,0.16,0.47,0.00006,0.002)
+#goIDs <- c("GO:0051130","GO:0050789","GO:0019912","GO:0016301","GO:0003824","GO:0005783","GO:0043229")
+#pvalues <- c(0.001,0.5,0.0001,0.16,0.47,0.00006,0.002)
 
-ptest <- getAmigoTree(goIDs=goIDs, pvalues=pvalues, filename="pvaluetest")
+#ptest <- getAmigoTree(goIDs=goIDs, pvalues=pvalues, filename="pvaluetest")
 }
