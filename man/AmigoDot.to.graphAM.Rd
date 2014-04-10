@@ -27,8 +27,8 @@ Markus Schroeder <mschroed@jimmy.harvard.edu>
 goIDs <- c("GO:0051130","GO:0019912","GO:0005783")
 color <- c("lightblue","red","yellow")
 
-#dd <- getAmigoTree(goIDs=goIDs,color=color,
-#  filename="example",picType="dot",saveResult=FALSE)
-#tt <- readAmigoDot(object=dd)
-#AmigoDot.to.graphAM(tt)
+dd <- getAmigoTree(goIDs=goIDs,color=color,
+  filename="example",picType="dot",saveResult=FALSE)
+tt <- readAmigoDot(object=dd)
+AmigoDot.to.graphAM(tt)
 }

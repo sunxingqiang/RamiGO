@@ -96,7 +96,7 @@ The \Rpackage{RamiGO} package currently provides two functions that enable the u
 
 To retrieve a tree from AmiGO, the user has to provide a vector of GO ID's. For example GO:0051130, GO:0019912, GO:0005783, GO:0043229 and GO:0050789. These GO ID's represent entries from the three GO categories: Biological Process, Molecular Function and Cellular Component. The given GO ID's can be highlighted with different colors within the tree, therefor the user has to provide a vector of colors for each GO ID. A request could look like this:
 
-<<getAmigoTreePNG, eval=FALSE>>=
+<<getAmigoTreePNG>>=
 goIDs <- c("GO:0051130","GO:0019912","GO:0005783","GO:0043229","GO:0050789")
 color <- c("lightblue","red","yellow","green","pink")
 pngRes <- getAmigoTree(goIDs=goIDs, color=color, filename="example", picType="png", saveResult=TRUE)
@@ -118,7 +118,7 @@ svgRes <- getAmigoTree(goIDs=goIDs, color=color, filename="example", picType="sv
 \Robject{svgRes} is a vector with the svg picture in xml format. In order to further analyze the tree, \Rpackage{RamiGO} provides the possibility to retrieve the tree in the GraphViz DOT format. The function \Rfunction{readAmigoDot} parses these DOT format files and returns a \Robject{AmigoDot} S4 object. This S4 object includes an igraph object (\Rfunction{agraph()}), an adjacency matrix representing the graph (\Rfunction{adjMAtrix()}), a data.frame with the annotation for each node (\Rfunction{annot()}), the relations (edges) between the nodes (\Rfunction{relations()}) and a data.frame with the leaves of the tree and their annotation (\Rfunction{leaves()}). An example could look like this:
 
 
-<<getAmigoTreeDOT, eval=FALSE>>=
+<<getAmigoTreeDOT>>=
 dotRes <- getAmigoTree(goIDs=goIDs, color=color, filename="example", picType="dot", saveResult=TRUE)
 tt <- readAmigoDot(object=dotRes)
 ## reading the file would also work!
@@ -128,7 +128,7 @@ show(tt)
 
 The leaves of the tree are returned in \Robject{leaves(tt)}:
 
-<<leaves, eval=FALSE>>=
+<<leaves>>=
 leavesTT <- leaves(tt)
 leavesTT[,c("node","GO_ID","description")]
 @

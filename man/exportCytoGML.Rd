@@ -27,14 +27,14 @@ Benjamin Haibe-Kains <bhaibeka@jimmy.harvard.edu>
 goIDs <- c("GO:0051130","GO:0019912","GO:0005783")
 color <- c("lightblue","red","yellow")
 
-#dd <- getAmigoTree(goIDs=goIDs,color=color,
-#  filename="example",picType="dot",saveResult=FALSE)
-#tt <- readAmigoDot(object=dd)
+dd <- getAmigoTree(goIDs=goIDs,color=color,
+  filename="example",picType="dot",saveResult=FALSE)
+tt <- readAmigoDot(object=dd)
 
 ## exportCytoGML is called inside adjM2gml
-#adjM2gml(adjMatrix(tt),relations(tt)$color,
-#  annot(tt)$fillcolor,annot(tt)$GO_ID,
-#  annot(tt)$description,"example")
+adjM2gml(adjMatrix(tt),relations(tt)$color,
+  annot(tt)$fillcolor,annot(tt)$GO_ID,
+  annot(tt)$description,"example")
 }
 \keyword{ igraph }
 \keyword{ graph }
